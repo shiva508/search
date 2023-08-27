@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './find-friend/search/search.component';
 import { EditComponent } from './find-friend/edit/edit.component';
+import { GridIntroComponent } from './grid-intro/grid-intro.component';
+import { AboutusComponent } from './natours/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { EditComponent } from './find-friend/edit/edit.component';
     FindFriendComponent,
     SearchComponent,
     EditComponent,
+    GridIntroComponent,
+    AboutusComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
