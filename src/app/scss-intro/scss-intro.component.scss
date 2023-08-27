@@ -1,0 +1,86 @@
+$color_primary: #f9ed69;
+$color_secondary: #f08a5d;
+$color_tritiory: #b83b5e;
+$color_text_dark: #333;
+$color_text_light: #eee;
+
+$width-button: 150px;
+
+@mixin clearFix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin style-link-text($color) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color;
+}
+
+@function divide($input1, $input2) {
+  @return $input1/$input2;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  // margin: 30px;
+  margin: divide(60, 2) * 1px;
+  background-color: $color_primary;
+  @include clearFix;
+}
+// Clear fix when floting on div makes height zero
+/*
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}*/
+.navigation {
+  list-style: none;
+  float: left;
+  li {
+    display: inline-block;
+    margin-left: 30px;
+    &:first-child {
+      margin: 0;
+    }
+    a {
+      @include style-link-text($color_text_dark);
+    }
+  }
+}
+.buttons {
+  float: right;
+}
+%button-placeholder {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  width: $width-button;
+  @include style-link-text($color_text_light);
+}
+
+.btn-main {
+  &:link {
+    @extend %button-placeholder;
+    background-color: $color_secondary;
+  }
+  &:hover {
+    background-color: darken($color_secondary, 15%);
+  }
+}
+.btn-hot {
+  &:link {
+    @extend %button-placeholder;
+    background-color: $color_tritiory;
+  }
+  &:hover {
+    background-color: lighten($color_tritiory, 10%);
+  }
+}
