@@ -13,6 +13,7 @@ import { SearchComponent } from './find-friend/search/search.component';
 import { EditComponent } from './find-friend/edit/edit.component';
 import { GridIntroComponent } from './grid-intro/grid-intro.component';
 import { AboutusComponent } from './natours/aboutus/aboutus.component';
+import { FeatuesComponent } from './natours/featues/featues.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AboutusComponent } from './natours/aboutus/aboutus.component';
     EditComponent,
     GridIntroComponent,
     AboutusComponent,
+    FeatuesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
