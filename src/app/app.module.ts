@@ -14,6 +14,8 @@ import { EditComponent } from './find-friend/edit/edit.component';
 import { GridIntroComponent } from './grid-intro/grid-intro.component';
 import { AboutusComponent } from './natours/aboutus/aboutus.component';
 import { FeatuesComponent } from './natours/featues/featues.component';
+import { MatIconModule } from '@angular/material/icon';
+import { PopularToursComponent } from './natours/popular-tours/popular-tours.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,15 @@ import { FeatuesComponent } from './natours/featues/featues.component';
     GridIntroComponent,
     AboutusComponent,
     FeatuesComponent,
+    PopularToursComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
